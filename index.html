@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting System</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Inline CSS to define the background image and styling */
+        .bg-custom {
+            background-image: url('https://vojislavd.com/ta-template-demo/assets/img/auth-background.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Adding a glossy effect */
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+            backdrop-filter: blur(10px); /* Glossy blur effect */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+        }
+
+        /* Stylish button with glossy effect */
+        .glossy-button {
+            background: linear-gradient(145deg, #6b9df2, #5a8dee); /* Gradient background */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+            color: white; /* Text color */
+            padding: 0.75rem 1.5rem; /* Padding for size */
+            border-radius: 8px; /* Rounded corners */
+            font-weight: bold; /* Bold text */
+            transition: all 0.3s ease; /* Smooth transition */
+        }
+
+        .glossy-button:hover {
+            background: linear-gradient(145deg, #5a8dee, #6b9df2); /* Hover effect to reverse gradient */
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
+            transform: translateY(-2px); /* Lift the button on hover */
+        }
+
+        .glossy-button-green {
+            background: linear-gradient(145deg, #34d399, #22c55e); /* Green gradient */
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            font-weight: bold;
+            padding: 0.75rem 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .glossy-button-green:hover {
+            background: linear-gradient(145deg, #22c55e, #34d399); /* Hover effect to reverse green gradient */
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-custom flex items-center justify-center min-h-screen">
+    <div class="glass-effect rounded-lg shadow-lg p-8 max-w-3xl mx-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center">
+            <!-- Left side: Title, Slogan, and Icon -->
+            <div class="text-left md:pr-8">
+                <h1 class="text-4xl font-bold mb-2 text-black flex items-center">
+                    <i class="fas fa-vote-yea mr-2"></i>
+                    Online Voting System
+                </h1>
+                <p class="mb-4 text-black flex items-center">
+                    <!-- <i class="fas fa-check-circle mr-2"></i> Slogan icon -->
+                    Empowering your voice, one vote at a time.
+                </p>
+            </div>
+
+            <!-- Right side: Buttons with Icons -->
+            <div class="flex flex-col space-y-4 md:pl-8">
+                <!-- Admin Button -->
+                <a href="/votesystem/admin/index.php" class="glossy-button text-center flex items-center justify-center">
+                    <i class="fas fa-user-shield mr-2"></i> <!-- Admin icon -->
+                    Admin
+                </a>
+
+                <!-- Voter Button -->
+                <a href="index.php" class="glossy-button-green text-center flex items-center justify-center">
+                    <i class="fas fa-user-check mr-2"></i> <!-- Voter icon -->
+                    Voter
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
